@@ -1,12 +1,14 @@
 import { observable, computed, action } from "mobx";
+import ObservableCounter from "./observableCounter";
 
 export default class ObservableCounterStore {
   @observable
   counters = [
-    { id: 1, value: 4 },
-    { id: 2, value: 0 },
-    { id: 3, value: 0 },
-    { id: 4, value: 0 }
+    new ObservableCounter(1, 0, this),
+    new ObservableCounter(2, 2, this),
+    new ObservableCounter(3, 0, this),
+    new ObservableCounter(4, 0, this),
+    new ObservableCounter(5, 1, this)
   ];
 
   @computed
