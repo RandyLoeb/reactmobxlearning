@@ -20,10 +20,6 @@ class Counter extends Component {
     tags: ["tag1", "tage2", "tag3"]
   };*/
 
-  /*handleIncrement = () => {
-    this.setState({ value: this.state.value + 1 });
-  };*/
-
   render() {
     console.log("Counter - Rendered");
     return (
